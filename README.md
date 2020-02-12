@@ -1,8 +1,7 @@
 # bat2bat
 
-  <!-- badges: start -->
   [![Travis build status](https://travis-ci.org/folkehelseprofil/bat2bat.svg?branch=master)](https://travis-ci.org/folkehelseprofil/bat2bat)
-  <!-- badges: end -->
+
 
 Denne R pakke er en shinyApp som brukes til for å sammenlikne batch filer.
 
