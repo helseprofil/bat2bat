@@ -2,7 +2,7 @@ Package: bat2bat
 Title: BATCH MOT BATCH
 Version: 0.0.1.1
 Authors@R: person('Yusman', 'Kamaleri', email = 'ybka@fhi.no', role = c('cre', 'aut'))
-Description: Sammenlikne forrige batch mot ny batch.
+Description: Sammenlikne batch filer.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -19,7 +19,7 @@ Imports:
     pkgload,
     shinyjs
 RoxygenNote: 7.0.2
-URL: https://gthub.com/ybkamaleri/bat2bat
-BugReports: https://gthub.com/ybkamaleri/bat2bat/issues
+URL: https://github.com/folkehelseprofil/bat2bat
+BugReports: https://gthub.com/folkehelseprofil/bat2bat/issues
 Suggests: 
     testthat (>= 2.1.0)

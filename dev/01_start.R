@@ -11,11 +11,11 @@
 golem::fill_desc(
   pkg_name = "bat2bat", # The Name of the package containing the App 
   pkg_title = "BATCH MOT BATCH", # The Title of the package containing the App 
-  pkg_description = "Sammenlikne forrige batch mot ny batch.", # The Description of the package containing the App 
+  pkg_description = "Sammenlikne batch filer.", # The Description of the package containing the App 
   author_first_name = "Yusman", # Your First Name
   author_last_name = "Kamaleri",  # Your Last Name
   author_email = "ybka@fhi.no",      # Your Email
-  repo_url = "https://gthub.com/ybkamaleri/bat2bat" # The (optional) URL of the GitHub Repo
+  repo_url = "https://github.com/folkehelseprofil/bat2bat" # The (optional) URL of the GitHub Repo
 )     
 
 ## Use this desc to set {golem} options
@@ -54,7 +54,7 @@ golem::use_recommended_deps()
 
 # If you want to change the favicon (default is golem's one)
 golem::remove_favicon()
-golem::use_favicon() # path = "path/to/ico". Can be an online file. 
+golem::use_favicon("c:/fhprofil/fhi04.ico") # path = "path/to/ico". Can be an online file. 
 
 # Add helper functions 
 golem::use_utils_ui()
