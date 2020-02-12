@@ -1,0 +1,25 @@
+Package: bat2bat
+Title: BATCH MOT BATCH
+Version: 0.0.1.1
+Authors@R: person('Yusman', 'Kamaleri', email = 'ybka@fhi.no', role = c('cre', 'aut'))
+Description: Sammenlikne forrige batch mot ny batch.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    shiny,
+    golem,
+    processx,
+    attempt,
+    DT,
+    glue,
+    htmltools,
+    data.table,
+    stringr,
+    pkgload,
+    shinyjs
+RoxygenNote: 7.0.2
+URL: https://gthub.com/ybkamaleri/bat2bat
+BugReports: https://gthub.com/ybkamaleri/bat2bat/issues
+Suggests: 
+    testthat (>= 2.1.0)
