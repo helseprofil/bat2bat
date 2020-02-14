@@ -53,7 +53,7 @@ mod_csvfile_module_ui <- function(id){
     ## verbatimTextOutput(ns("txt"), placeholder = TRUE),
     ## textOutput(ns("txt2")),
     hr(),
-    DT::DTOutput(ns("batch_tbl"))
+    DT::dataTableOutput(ns("batch_tbl"))
   )
 }
 
@@ -207,7 +207,7 @@ mod_csvfile_module_server <- function(input, output, session){
 
 
   ## Tabell output
-  output$batch_tbl <- DT::renderDT({
+  output$batch_tbl <- DT::renderDataTable({
       if (is.null(raw$allDT)) return()
 
       DT::datatable(raw$allDT, rownames = FALSE,
