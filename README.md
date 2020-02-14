@@ -3,7 +3,7 @@
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/folkehelseprofil/bat2bat?branch=master&svg=true)](https://ci.appveyor.com/project/folkehelseprofil/bat2bat)
 
 Denne R pakke er en shinyApp som brukes til for å sammenlikne batch filer.
-Online versjon er tilgjengelig [https://fhprofil.shinyapps.io/bat2bat/](Shinyapps.io)
+Online versjon er tilgjengelig på [shinyapps.io](https://fhprofil.shinyapps.io/bat2bat/)
 
 ## Installasjon
 
