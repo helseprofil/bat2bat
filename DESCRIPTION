@@ -17,7 +17,8 @@ Imports:
     data.table,
     stringr,
     pkgload,
-    shinyjs
+    shinyjs,
+    stringi
 RoxygenNote: 7.0.2
 URL: https://github.com/folkehelseprofil/bat2bat
 BugReports: https://gthub.com/folkehelseprofil/bat2bat/issues

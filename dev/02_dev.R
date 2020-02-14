@@ -15,7 +15,7 @@ golem::add_module( name = "tabs_module" ) # Name of the module
 usethis::use_package( "data.table" ) # To call each time you need a new package
 usethis::use_package("stringr")
 usethis::use_package("shinyjs")
-
+usethis::use_package("stringi")
 
 ## 2.3 Add tests
 
