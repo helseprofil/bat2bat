@@ -25,5 +25,6 @@ BugReports: https://gthub.com/folkehelseprofil/bat2bat/issues
 Suggests: 
     testthat (>= 2.1.0),
     knitr,
-    rmarkdown
+    rmarkdown,
+    covr
 VignetteBuilder: knitr
