@@ -1,8 +1,8 @@
 # bat2bat
 
  <!-- badges: start -->
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/folkehelseprofil/bat2bat?branch=master&svg=true&label=TravisCI&style=flat-square)](https://ci.appveyor.com/project/folkehelseprofil/bat2bat)
-[![Travis build status](https://travis-ci.org/folkehelseprofil/bat2bat.svg?branch=master)](https://travis-ci.org/folkehelseprofil/bat2bat)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/folkehelseprofil/bat2bat?branch=master&svg=true)](https://ci.appveyor.com/project/folkehelseprofil/bat2bat)
+[![Travis build status](https://travis-ci.org/folkehelseprofil/bat2bat.svg?branch=master?style=flat-square&label=TravisCI)](https://travis-ci.org/folkehelseprofil/bat2bat)
 [![Codecov test coverage](https://codecov.io/gh/folkehelseprofil/bat2bat/branch/master/graph/badge.svg)](https://codecov.io/gh/folkehelseprofil/bat2bat?branch=master)
  <!-- badges: end -->
 
