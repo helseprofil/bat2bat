@@ -15,7 +15,7 @@ Online versjon er tilgjengelig på [shinyapps.io](https://fhprofil.shinyapps.io/
 For å installere pakken, kan følgende kode kjøres i R:
 
 ```r
-if (!require("remotes")) install.package("remotes")
+if (!require("remotes")) install.packages("remotes")
 remotes::install_github("folkehelseprofil/bat2bat", dependencies=TRUE)
 ```
 
