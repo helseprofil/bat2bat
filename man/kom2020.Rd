@@ -4,7 +4,9 @@
 \name{kom2020}
 \alias{kom2020}
 \title{Kommune data}
-\format{An object of class \code{data.table} (inherits from \code{data.frame}) with 389 rows and 5 columns.}
+\format{
+An object of class \code{data.table} (inherits from \code{data.frame}) with 424 rows and 4 columns.
+}
 \usage{
 data(kom2020)
 }

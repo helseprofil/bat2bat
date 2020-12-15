@@ -130,6 +130,7 @@ mod_csvfile_module_server <- function(input, output, session){
   all_data <- eventReactive(input$goButton, {
 
     ## Check for key variables in the datasett
+    ## stdkey is defined in global.R
     fileKey = names(raw$data2)
     valgKey = intersect(stdkey, fileKey)
 
