@@ -6,5 +6,9 @@
 #' @noRd
 app_server <- function( input, output, session ) {
   # Your application server logic 
-  
+  mod_csvfile_server("csvfile_ui_1")
+
+  session$onSessionEnded(function() {
+    stopApp()
+  })
 }
