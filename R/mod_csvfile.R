@@ -152,7 +152,7 @@ mod_csvfile_server <- function(id){
         var1=doVar[1]
         var2=doVar[2]
         diffCol=paste0(i,"_diff")
-        allFil[, (diffCol) := get(var1)-get(var2)]
+        allFil[, (diffCol) := base::get(var1)-base::get(var2)]
         colB4=names(allFil)[1:indVar]
         setcolorder(allFil, c(colB4, diffCol))
       }
