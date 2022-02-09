@@ -20,7 +20,7 @@ Imports:
     pkgload,
     shinyjs,
     stringi
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.2
 URL: https://github.com/folkehelseprofil/bat2bat
 BugReports: https://gthub.com/folkehelseprofil/bat2bat/issues
 Suggests: 

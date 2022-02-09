@@ -7,7 +7,8 @@ app_ui <- function() {
     fluidPage(
       shinyjs::useShinyjs(),
       h3("Batch mot batch"),
-      mod_csvfile_module_ui("csvfile_module_ui_1"),
+      mod_csvfile_ui("csvfile_ui_1"),
+      ## mod_csvfile_module_ui("csvfile_module_ui_1"),
       actionButton("browser", "browser"),
       tags$script("$('#browser').hide();")
     )

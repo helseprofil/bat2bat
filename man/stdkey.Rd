@@ -4,7 +4,9 @@
 \name{stdkey}
 \alias{stdkey}
 \title{Standard keys}
-\format{An object of class \code{character} of length 4.}
+\format{
+An object of class \code{character} of length 4.
+}
 \usage{
 stdkey
 }
