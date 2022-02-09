@@ -1,17 +1,25 @@
 Package: bat2bat
-Title: An Amazing Shiny App
+Title: Sammenlikner Batch Filer
 Version: 0.0.0.9000
-Authors@R: 
-    person(given = "firstname",
-           family = "lastname",
-           role = c("aut", "cre"),
-           email = "your@email.com")
-Description: What the package does (one paragraph).
-License: What license is it under?
+Authors@R: person('Yusman', 'Kamaleri', email = 'ybka@fhi.no', role = c('cre', 'aut'))
+Description: Sammenlikner Årets- mot fjorårets batch filer.
+License: MIT + file LICENSE
 Imports: 
+    attempt,
     config (>= 0.3.1),
+    DT,
+    glue,
     golem (>= 0.3.1),
+    htmltools,
+    processx,
     shiny (>= 1.7.1)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
+URL: https://github.com/folkehelseprofil/bat2bat
+BugReports: https://github.com/folkehelseprofil/bat2bat/issues
+Suggests: 
+    spelling,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Language: en-US
