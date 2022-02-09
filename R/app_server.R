@@ -1,14 +1,12 @@
 #' @import shiny
 
 app_server <- function(input, output,session) {
-  # List the first level callModules here
-  callModule(mod_csvfile_module_server, "csvfile_module_ui_1")
+  # To be copied in the server
+  mod_csvfile_server("csvfile_ui_1")
+  ## # List the first level callModules here
+  ## callModule(mod_csvfile_module_server, "csvfile_module_ui_1")
 
-  observeEvent(input$browser,{
-    browser()
-  })
-
-session$onSessionEnded(function() {
+  session$onSessionEnded(function() {
     stopApp()
-})
+  })
 }

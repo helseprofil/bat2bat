@@ -53,7 +53,7 @@ mod_csvfile_module_ui <- function(id){
     ## verbatimTextOutput(ns("txt"), placeholder = TRUE),
     ## textOutput(ns("txt2")),
     hr(),
-    DT::dataTableOutput(ns("batch_tbl"))
+    shiny::dataTableOutput(ns("batch_tbl"))
   )
 }
 
@@ -168,7 +168,7 @@ mod_csvfile_module_server <- function(input, output, session){
       var1=doVar[1]
       var2=doVar[2]
       diffCol=paste0(i,"_diff")
-      allFil[, (diffCol) := get(var1)-get(var2)]
+      allFil[, (diffCol) := base::get(var1)-base::get(var2)]
       colB4=names(allFil)[1:indVar]
       setcolorder(allFil, c(colB4, diffCol))
     }
@@ -207,10 +207,10 @@ mod_csvfile_module_server <- function(input, output, session){
 
 
   ## Tabell output
-  output$batch_tbl <- DT::renderDataTable({
+  output$batch_tbl <- shiny::renderDataTable({
       if (is.null(raw$allDT)) return()
 
-      DT::datatable(raw$allDT, rownames = FALSE,
+      shiny::datatable(raw$allDT, rownames = FALSE,
                     options=list(
                         pageLength=50,
                         searching=FALSE,
