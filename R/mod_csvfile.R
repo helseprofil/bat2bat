@@ -18,7 +18,7 @@ mod_csvfile_ui <- function(id){
                        width = '100%',
                        buttonLabel = "Søk",
                        placeholder = "Fjorårets fil her"),
-             div(style = "margin-top: -22px"),
+             div(style = "margin-top: -21px;"),
              fileInput(ns("csv2"),
                        label = NULL,
                        multiple = FALSE,
@@ -40,8 +40,6 @@ mod_csvfile_ui <- function(id){
              )
     ),
 
-    ## verbatimTextOutput(ns("txt"), placeholder = TRUE),
-    ## textOutput(ns("txt2")),
     hr(),
     shiny::dataTableOutput(ns("batch_tbl"))
   )
@@ -144,9 +142,7 @@ mod_csvfile_server <- function(id){
       nyCol=c(keyCol, sortColValg)
       data.table::setcolorder(allFil, nyCol) #reorder col
 
-      ## loops
       for (i in diffKeys){
-
         indVar=grep(paste0("^",i,""), names(allFil))[2]
         doVar=grep(paste0("^",i,""), names(allFil), value = TRUE)
         var1=doVar[1]
