@@ -52,7 +52,7 @@ golem::use_recommended_deps()
 ## Favicon ----
 # If you want to change the favicon (default is golem's one)
 golem::use_favicon(path = system.file("app/www/favicon.ico", package = "bat2bat")) # path = "path/to/ico". Can be an online file.
-usethis::use_logo("/home/ybk/Git-fhi/bat2bat/dev/logo.png", geometry = "230x268")
+usethis::use_logo("/home/ybk/Git-fhi/bat2bat/dev/logo2.png")
 golem::remove_favicon()
 
 ## Add helper functions ----
