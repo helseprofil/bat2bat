@@ -27,7 +27,7 @@ library("badger")
 ```{r, echo = FALSE, results='asis'}
 cat(
   badge_github_actions(),
-  badge_codecov("helseprofil/bat2bat"),
+  ## badge_codecov("helseprofil/bat2bat"),
   badge_lifecycle("experimental", "orange"),
   badge_github_version("helseprofil/bat2bat", "blue")
 )
