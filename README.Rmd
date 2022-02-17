@@ -1,5 +1,8 @@
 ---
-output: github_document
+output:
+  md_document:
+    variant: gfm
+html_preview: false
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -12,12 +15,25 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
+# orgdata <img src='man/figures/logo.png' align="right" width="110" height="138" />
+
+
+```{r echo=FALSE, results="hide", message=FALSE}
+# bat2bat <img src="man/figures/logo.png" align="right" height="98" />
+library("badger")
+```
+
+
+```{r, echo = FALSE, results='asis'}
+cat(
+  badge_github_actions(),
+  badge_codecov("helseprofil/bat2bat"),
+  badge_lifecycle("experimental", "orange"),
+  badge_github_version("helseprofil/bat2bat", "blue")
+)
+```
 
 # bat2bat
-
-<!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-<!-- badges: end -->
 
 The goal of bat2bat is to ...
 

@@ -92,6 +92,8 @@ mod_csvfile_server <- function(id){
     ## Give new GEO to old data --------------------
     old_data <- reactive({
 
+      geoChange <- norgeo::track_change("kommune", 2020, 2021)
+
       ## Give new GEO to older dataset
       dtb4 = merge(raw$data1, mixFil,
                    by.x = "GEO",
@@ -113,9 +115,10 @@ mod_csvfile_server <- function(id){
 
       ## Check for key variables in the datasett
       fileKey = names(raw$data2)
+      stdkey = c("GEO", "AAR", "KJONN")
       valgKey = intersect(stdkey, fileKey)
 
-      if (length(raw$tabs)){
+      if (raw$tabs != ""){
         innKeys = trimws(unlist(strsplit(raw$tabs, "[,]")))
         allKeys = c(valgKey, innKeys)
       } else {
@@ -125,8 +128,8 @@ mod_csvfile_server <- function(id){
       #Column names that aren't keys
       diffKeys=setdiff(fileKey, allKeys)
 
-      oldDT = setDT(old_data())
-      newDT = setDT(raw$data2)
+      oldDT = data.table::setDT(old_data())
+      newDT = data.table::setDT(raw$data2)
       ## Merge both datasets
       allFil = data.table::merge.data.table(oldDT,newDT, by = allKeys, all.y = TRUE)
 
