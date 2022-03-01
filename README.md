@@ -1,13 +1,9 @@
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# bat2bat
+# bat2bat <img src='man/figures/logo.png' align="right" width="110" height="138" />
 
-<!-- badges: start -->
-
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-<!-- badges: end -->
+[![](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![](https://img.shields.io/badge/devel%20version-0.0.0.9000-blue.svg)](https://github.com/helseprofil/bat2bat)
 
 The goal of bat2bat is to …
 

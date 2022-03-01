@@ -18,7 +18,7 @@ mod_csvfile_ui <- function(id){
                        width = '100%',
                        buttonLabel = "Søk",
                        placeholder = "Fjorårets fil her"),
-             div(style = "margin-top: -22px"),
+             div(style = "margin-top: -21px;"),
              fileInput(ns("csv2"),
                        label = NULL,
                        multiple = FALSE,
@@ -40,8 +40,6 @@ mod_csvfile_ui <- function(id){
              )
     ),
 
-    ## verbatimTextOutput(ns("txt"), placeholder = TRUE),
-    ## textOutput(ns("txt2")),
     hr(),
     shiny::dataTableOutput(ns("batch_tbl"))
   )
@@ -94,6 +92,8 @@ mod_csvfile_server <- function(id){
     ## Give new GEO to old data --------------------
     old_data <- reactive({
 
+      geoChange <- norgeo::track_change("kommune", 2020, 2021)
+
       ## Give new GEO to older dataset
       dtb4 = merge(raw$data1, mixFil,
                    by.x = "GEO",
@@ -115,9 +115,10 @@ mod_csvfile_server <- function(id){
 
       ## Check for key variables in the datasett
       fileKey = names(raw$data2)
+      stdkey = c("GEO", "AAR", "KJONN")
       valgKey = intersect(stdkey, fileKey)
 
-      if (length(raw$tabs)){
+      if (raw$tabs != ""){
         innKeys = trimws(unlist(strsplit(raw$tabs, "[,]")))
         allKeys = c(valgKey, innKeys)
       } else {
@@ -127,8 +128,8 @@ mod_csvfile_server <- function(id){
       #Column names that aren't keys
       diffKeys=setdiff(fileKey, allKeys)
 
-      oldDT = setDT(old_data())
-      newDT = setDT(raw$data2)
+      oldDT = data.table::setDT(old_data())
+      newDT = data.table::setDT(raw$data2)
       ## Merge both datasets
       allFil = data.table::merge.data.table(oldDT,newDT, by = allKeys, all.y = TRUE)
 
@@ -144,9 +145,7 @@ mod_csvfile_server <- function(id){
       nyCol=c(keyCol, sortColValg)
       data.table::setcolorder(allFil, nyCol) #reorder col
 
-      ## loops
       for (i in diffKeys){
-
         indVar=grep(paste0("^",i,""), names(allFil))[2]
         doVar=grep(paste0("^",i,""), names(allFil), value = TRUE)
         var1=doVar[1]
